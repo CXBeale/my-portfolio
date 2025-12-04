@@ -1,0 +1,70 @@
+.nav-container {
+    display: flex;                /* Makes the container a flexbox, enabling flexible layouts */
+    justify-content: space-between; /* Spaces child elements as far apart as possible (logo left, links right) */
+    align-items: center;          /* Vertically centers child elements within the container */
+    padding: 1rem 2rem;           /* Adds space inside the container: 1rem top/bottom, 2rem left/right */
+    background: #222;             /* Sets the background color to a dark gray */
+    color: #fff;                  /* Sets the text color to white for all child elements */
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* nav links in dropdown menu */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #222;
+    list-style: none;           /* remove the list item bullet point */
+}
+
+/* nav links style */
+.nav-links a {
+    color: #ffff;              /* Sets the text color to white for all links */
+    text-decoration: none;      /* Removes underline from links */
+    font-size: 1rem;            /* Sets a standard font size for links */
+    transition: color 0.3s;      /* Smooth transition for color changes on hover */
+}
+
+/* nav link hover */
+.nav-links a:hover {
+    color: #ff6347;              /* Changes link color to a tomato red on hover */
+}
+
+.hamburger {
+    display: flex;               /* displays the hamburger menu by default */
+    flex-direction: column;
+    background-color: #818181;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.hamburger .bar {
+    width: 25px;                 /* Sets the width of each bar */
+    height: 3px;                 /* Sets the height of each bar */
+    border-radius: 2px;            /* Rounds the corners of the bars */
+    background-color: #fff;      /* Sets the color of the bars to white */
+    margin: 4px 0;               /* Adds vertical spacing between bars */
+}
+
+/* Responsive styling */
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        background: none;
+    }
+
+    .hamburger {
+        display: none
+    }
+
+
+}
