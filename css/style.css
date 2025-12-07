@@ -36,6 +36,13 @@
     color: #ff6347;              /* Changes link color to a tomato red on hover */
 }
 
+/* click event class toggle */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  /* ...other styles for dropdown... */
+}
+
 .hamburger {
     display: flex;               /* displays the hamburger menu by default */
     flex-direction: column;
@@ -51,6 +58,7 @@
     background-color: #fff;      /* Sets the color of the bars to white */
     margin: 4px 0;               /* Adds vertical spacing between bars */
 }
+
 
 /* Responsive styling */
 
