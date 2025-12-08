@@ -34,6 +34,9 @@ Uncomment and add screenshots once available:
 - Smooth scroll navigation
 - Back to top button
 
+### Additional Features
+- Aria accessiblity features
+
 ## Technologies Used
 
 - HTML5

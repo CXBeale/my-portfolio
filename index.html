@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="description" content="CXBeale's personal portfolio showcasing projects, skills, and contact information.">
+    <meta name="author" content="CXBeale">
+    <meta property="og:title" content="CXBeale Portfolio">
+    <meta property="og:description" content="Showcasing web development projects and contact info.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta property="og:image" content="https://your-portfolio-url.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CXBeale Portfolio">
+    <meta name="twitter:description" content="Showcasing web development projects and contact info.">
+    <meta name="twitter:image" content="https://your-portfolio-url.com/og-image.jpg">
+    <title>CXBeale | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main Navigation">
         <div class="nav-container">
             <!-- Logo -->
             <div class="logo">
                 <a href="#hero">CXBeale Portfolio</a>
             </div>
             <!-- Navigation Links -->
-            <ul class="nav-links">
+            <ul class="nav-links" id="main-nav">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- hamburger menu -->
-            <div class="hamburger">
+            <div class="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav" tabindex="0">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>

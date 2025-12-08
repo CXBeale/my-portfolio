@@ -1,4 +1,31 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+/* CSS Variables */
+:root {
+  --primary-color: #0077cc;
+  --spacing: 1rem;
+}
+
+#navbar {
+    position: fixed;            /* Fixes the navbar to the top of the viewport */
+    top: 0;                     /* Aligns the navbar to the top */
+    width: 100%;                /* Makes the navbar span the full width of the viewport */
+    z-index: 1000;              /* Ensures the navbar stays above other content */
+}
+
 .nav-container {
+    position: relative;          /* Establishes a positioning context for absolutely positioned children */
     display: flex;                /* Makes the container a flexbox, enabling flexible layouts */
     justify-content: space-between; /* Spaces child elements as far apart as possible (logo left, links right) */
     align-items: center;          /* Vertically centers child elements within the container */
@@ -17,9 +44,13 @@
 /* nav links in dropdown menu */
 .nav-links {
     display: none;
+    position: absolute;       /* Positions the nav links absolutely within the nearest positioned ancestor */
+    top: 100%;               /* Places the nav links directly below the nav container */
+    left: 0;
+    width: 100%;              /* Makes the nav links take the full width of the container */
     flex-direction: column;
-    gap: 1.5rem;
-    background: #222;
+    gap: 1rem;
+    background: #d88686;
     list-style: none;           /* remove the list item bullet point */
 }
 
@@ -29,6 +60,7 @@
     text-decoration: none;      /* Removes underline from links */
     font-size: 1rem;            /* Sets a standard font size for links */
     transition: color 0.3s;      /* Smooth transition for color changes on hover */
+    padding-left: 2rem;
 }
 
 /* nav link hover */
@@ -58,7 +90,11 @@
     background-color: #fff;      /* Sets the color of the bars to white */
     margin: 4px 0;               /* Adds vertical spacing between bars */
 }
-
+/* Focus styles for accessibility */
+a:focus, button:focus, .hamburger:focus {
+  outline: 2px solid var(--primary-color, #0077cc);
+  outline-offset: 2px;
+}
 
 /* Responsive styling */
 
@@ -68,6 +104,12 @@
         display: flex;
         flex-direction: row;
         background: none;
+        position: static;
+        width: auto;
+    }
+
+    .nav-links a {
+        padding-left: 0;
     }
 
     .hamburger {
