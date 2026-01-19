@@ -78,7 +78,7 @@ main {
     top: 100%;               /* Places the nav links directly below the nav container */
     left: 0;
     width: 100%;              /* Makes the nav links take the full width of the container */
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     background: var(--accent-color);
     list-style: none;           /* remove the list item bullet point */
@@ -92,7 +92,7 @@ main {
     text-decoration: none;      /* Removes underline from links */
     font-size: 1rem;            /* Sets a standard font size for links */
     transition: color 0.3s;      /* Smooth transition for color changes on hover */
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
 
 /* nav link hover */
